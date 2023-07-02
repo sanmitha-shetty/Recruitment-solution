@@ -16,6 +16,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -55,7 +56,9 @@ const NavBar = () => {
         <a href="">
           <MdWork className="navbar-cart-icon" />
         </a>
-        <button className="primary-button">Login | Register</button>
+        <Link to={`/login`}>
+          <button className="primary-button">Login | Register</button>
+        </Link>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />

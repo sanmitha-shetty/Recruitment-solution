@@ -142,6 +142,9 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
 }
+.home-container{
+  padding-left: 50px;
+}
 .home-banner-container {
   position: relative;
   display: flex;

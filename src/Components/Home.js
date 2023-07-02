@@ -3,7 +3,11 @@ import NavBar from './NavBar'
 import BannerBackground from "../Assets/home-banner-background.png";
 import BannerImage from "../Assets/home-banner-image.png";
 import { FiArrowRight } from "react-icons/fi";
+import { Login } from './Login';
+import { Link } from 'react-router-dom';
+
 const Home = () => {
+  
   return (
     <div className="home-container">
       <NavBar />
@@ -18,9 +22,11 @@ const Home = () => {
           <p className="primary-text">
           Connecting Talent with Opportunity, Empowering Careers: Your Pathway to Success.
           </p>
-          <button className="secondary-button">
-            Register Now <FiArrowRight />{" "}
-          </button>
+          <Link to= {`/register`}>
+            <button className="secondary-button" >
+              Register Now <FiArrowRight />{" "}
+            </button>
+          </Link>
         </div>
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
@@ -29,5 +35,6 @@ const Home = () => {
     </div>
   )
 }
+
 
 export default Home
